@@ -5,9 +5,6 @@ class Movie(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField(max_length=5000)
     image = models.ImageField(upload_to = 'movie')
-    films = models.BooleanField(default=False)
-    soap_opera = models.BooleanField(default=False)
-    cartoons = models.BooleanField(default=False)
     kinopoisk_id = models.IntegerField(null=False)
 
     class Meta:
@@ -16,4 +13,3 @@ class Movie(models.Model):
 
     def __str__(self):
         return self.name
-
